@@ -1,29 +1,57 @@
-## Screenshots:
+<div align="center">
 
-model accuracy
-![image](https://github.com/user-attachments/assets/2bbe3a5f-ab4c-473e-97b2-b59d018c7a28)
+# 🚫 Toxic Comment Classification
 
-metrics with plot
-![image](https://github.com/user-attachments/assets/ba9a972b-d8f9-4dae-9cb7-fa589e2daa61)
-![image](https://github.com/user-attachments/assets/b43e48cf-3c43-48b3-9c23-1b9640417477)
+**A deep-learning NLP model that flags toxic online comments - with a Gradio demo.**
 
-## Toxic Comment Classification
-This repository contains a project focused on identifying and classifying toxic comments using machine learning and natural language processing (NLP) techniques. The objective is to develop a model that can accurately identify various types of toxic language within user-generated content.
+![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?logo=tensorflow&logoColor=white)
+![Keras](https://img.shields.io/badge/Keras-D00000?logo=keras&logoColor=white)
+![Gradio](https://img.shields.io/badge/Gradio-F97316)
+![Colab](https://img.shields.io/badge/Open_in-Colab-F9AB00?logo=googlecolab&logoColor=white)
 
-## Project Overview
-The toxic_comment_classification project is built on a dataset containing a variety of user comments labeled for different types of toxicity, such as insults, threats, or hate speech. The project aims to build a classifier that can categorize these comments, supporting content moderation efforts and enhancing user safety.
+</div>
 
-## Contents
-toxic_comment_classification.ipynb: The primary notebook for the project, containing data preprocessing, exploratory data analysis, model training, evaluation, and results.
-## Project Workflow
-Data Preprocessing: Handling missing values, text cleaning, and preparing the data for model training.
-Exploratory Data Analysis (EDA): Visualizing and understanding the distribution of toxicity levels across the dataset.
-Model Selection and Training: Experimenting with various NLP models and tuning hyperparameters to maximize performance.
-Evaluation and Results: Evaluating model performance using metrics like accuracy, F1-score, precision, and recall.
+---
 
+## ✨ Overview
 
-## Usage
-Open the toxic_comment_classification.ipynb notebook.
-Follow the cells to preprocess data, train models, and evaluate results.
-## Results
-The final model achieved a satisfactory performance level in detecting and classifying toxic comments, making it suitable for real-world applications like content moderation.
+The notebook builds a multi-label classifier that identifies toxic comments (the Jigsaw *Toxic Comment Classification* data: `train.csv`, `test.csv`, `test_labels.csv`) using Keras text vectorization and a neural network, trained on the training set only.
+
+- 🎯 Validation accuracy of about **99 %** in the recorded training run (5 epochs).
+- 🖥️ A **Gradio** interface lets you type a comment and see the toxicity predictions.
+- ☁️ Designed to run in Google Colab:
+  [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Arashomranpour/toxic_comment/blob/main/toxic_comment_classification.ipynb)
+
+## 📸 Screenshots
+
+Model accuracy
+
+![Model accuracy](https://github.com/user-attachments/assets/2bbe3a5f-ab4c-473e-97b2-b59d018c7a28)
+
+Metrics with plots
+
+![Metrics](https://github.com/user-attachments/assets/ba9a972b-d8f9-4dae-9cb7-fa589e2daa61)
+![Metrics](https://github.com/user-attachments/assets/b43e48cf-3c43-48b3-9c23-1b9640417477)
+
+## 🚀 Getting Started
+
+```bash
+git clone https://github.com/Arashomranpour/toxic_comment.git
+cd toxic_comment
+pip install tensorflow keras pandas numpy matplotlib gradio jupyter
+jupyter notebook toxic_comment_classification.ipynb
+```
+
+Download the Jigsaw dataset from Kaggle and place `train.csv`, `test.csv` and `test_labels.csv` next to the notebook (or upload them in Colab).
+
+## 📁 Project Structure
+
+```
+.
+└── toxic_comment_classification.ipynb
+```
+
+## 🛠️ Tech Stack
+
+`TensorFlow / Keras` · `pandas` · `NumPy` · `Gradio`
